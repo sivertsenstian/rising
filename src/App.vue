@@ -44,6 +44,12 @@ const drawer = ref(!mobile.value);
           to="/buildorders"></v-list-item>
       <v-list-item
           color="green"
+          prepend-icon="mdi-earth"
+          title="Ladder Maps"
+          router
+          to="/maps"></v-list-item>
+      <v-list-item
+          color="green"
           prepend-icon="mdi-handshake-outline"
           title="About"
           router
