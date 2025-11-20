@@ -5,13 +5,14 @@ import NewBuildOrderView from "@/views/BuildOrders/NewBuildOrderView.vue";
 import ShowBuildOrderView from "@/views/BuildOrders/ShowBuildOrderView.vue";
 import EditBuildOrderView from "@/views/BuildOrders/EditBuildOrderView.vue";
 import MapsView from "@/views/MapsView.vue";
+import DoctrinesView from "@/views/DoctrinesView.vue";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
-      redirect: "/buildorders"
+      redirect: "/buildorders",
     },
     {
       path: "/buildorders",
@@ -33,6 +34,11 @@ const router = createRouter({
           component: ShowBuildOrderView,
         },
       ],
+    },
+    {
+      path: "/doctrines",
+      name: "Doctrines",
+      component: DoctrinesView,
     },
     {
       path: "/maps",

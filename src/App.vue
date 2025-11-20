@@ -26,48 +26,54 @@ const drawer = ref(!mobile.value);
       <v-toolbar-title>Ape Science</v-toolbar-title>
     </v-app-bar>
     <v-navigation-drawer
-        expand-on-hover
-        rail
-        v-model="drawer"
-        :location="$vuetify.display.mobile ? 'bottom' : undefined">
+      expand-on-hover
+      rail
+      v-model="drawer"
+      :location="$vuetify.display.mobile ? 'bottom' : undefined">
       <v-list>
         <v-list-item
-            :prepend-avatar="logo"
-            title="APE SCIENCE"
-            subtitle="Tempest Rising Research Facility"></v-list-item>
+          :prepend-avatar="logo"
+          title="APE SCIENCE"
+          subtitle="Tempest Rising Research Facility"></v-list-item>
       </v-list>
       <v-list-item
-          color="green"
-          prepend-icon="mdi-castle"
-          title="Build Orders"
-          router
-          to="/buildorders"></v-list-item>
+        color="green"
+        prepend-icon="mdi-castle"
+        title="Build Orders"
+        router
+        to="/buildorders"></v-list-item>
       <v-list-item
-          color="green"
-          prepend-icon="mdi-earth"
-          title="Ladder Maps"
-          router
-          to="/maps"></v-list-item>
+        color="green"
+        prepend-icon="mdi-earth"
+        title="Ladder Maps"
+        router
+        to="/maps"></v-list-item>
       <v-list-item
-          color="green"
-          prepend-icon="mdi-handshake-outline"
-          title="About"
-          router
-          to="/about"></v-list-item>
+        color="green"
+        prepend-icon="mdi-family-tree"
+        title="Doctrines"
+        router
+        to="/doctrines"></v-list-item>
+      <v-list-item
+        color="green"
+        prepend-icon="mdi-handshake-outline"
+        title="About"
+        router
+        to="/about"></v-list-item>
       <v-divider></v-divider>
       <v-list density="compact" nav>
         <v-list-item
-            color="yellow"
-            prepend-icon="mdi-lightbulb"
-            :title="isDark ? 'Light' : 'Dark'"
-            @click="toggleTheme">
+          color="yellow"
+          prepend-icon="mdi-lightbulb"
+          :title="isDark ? 'Light' : 'Dark'"
+          @click="toggleTheme">
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-main>
       <div
-          class="container"
-          :style="{
+        class="container"
+        :style="{
           overflow: 'hidden',
           background: 'url(' + (isDark ? bgDarkUrl : bgLightUrl) + ')',
           backgroundPosition: 'center center',
