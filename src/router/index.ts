@@ -6,6 +6,8 @@ import ShowBuildOrderView from "@/views/BuildOrders/ShowBuildOrderView.vue";
 import EditBuildOrderView from "@/views/BuildOrders/EditBuildOrderView.vue";
 import MapsView from "@/views/MapsView.vue";
 import DoctrinesView from "@/views/DoctrinesView.vue";
+import ChangelogView from "@/views/ChangelogView.vue";
+import ChangelogAdminView from "@/views/ChangelogAdminView.vue";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -32,6 +34,17 @@ const router = createRouter({
           path: ":id",
           name: "Build Order",
           component: ShowBuildOrderView,
+        },
+      ],
+    },
+    {
+      path: "/changelog",
+      children: [
+        { path: "", name: "Changelog", component: ChangelogView },
+        {
+          path: "admin",
+          name: "Changelog Admin",
+          component: ChangelogAdminView,
         },
       ],
     },
