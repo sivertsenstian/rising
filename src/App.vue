@@ -50,6 +50,12 @@ const drawer = ref(!mobile.value);
         to="/maps"></v-list-item>
       <v-list-item
         color="green"
+        prepend-icon="mdi-scale-balance"
+        title="Changelog"
+        router
+        to="/changelog"></v-list-item>
+      <v-list-item
+        color="green"
         prepend-icon="mdi-family-tree"
         title="Doctrines"
         router
